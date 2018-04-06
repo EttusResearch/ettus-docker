@@ -24,7 +24,7 @@ Note the order of the naming above might vary by docker version, sometimes it mi
 After running the previous command, you will be inside the container. First,
 configure your build environment:
 
-   $ TEMPLATECONF=`pwd`/meta-ettus/conf/sulfur source ./oe-core/oe-init-build-env ./build ./bitbake
+    $ TEMPLATECONF=`pwd`/meta-ettus/conf/sulfur source ./oe-core/oe-init-build-env ./build ./bitbake
 
 Then, you can invoke bitbake to build the image:
 
