@@ -26,7 +26,9 @@ configure your build environment:
 
     $ TEMPLATECONF=`pwd`/meta-ettus/conf/sulfur source ./oe-core/oe-init-build-env ./build ./bitbake
 
+If you get a warning regarding chmod, you can probably ignore it.
+
 Then, you can invoke bitbake to build the image:
 
-    $ bitbake
+    $ bitbake <image-name>
 
