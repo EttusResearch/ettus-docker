@@ -32,3 +32,7 @@ Then, you can invoke bitbake to build the image:
 
     $ bitbake <image-name>
 
+To build the according SDK, run
+
+    $ bitbake <image-name> -cpopulate_sdk
+
