@@ -30,9 +30,15 @@ If you get a warning regarding chmod, you can probably ignore it.
 
 Then, you can invoke bitbake to build the image:
 
-    $ bitbake <image-name>
+    $ bitbake developer-image
 
 To build the according SDK, run
 
-    $ bitbake <image-name> -cpopulate_sdk
+    $ bitbake developer-image -cpopulate_sdk
+
+Note that "developer-image" is the name of the build target, the machine (i.e.,
+the USRP) that you're targeting is defined in the conf/local.conf file in the
+build directory. It will look something like this:
+
+    MACHINE="ni-sulfur-rev2-mender"
 
