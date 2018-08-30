@@ -79,7 +79,7 @@ WORKDIR /home/oe-builder
 USER oe-builder
 
 RUN git config --global user.name = "Ettus OE Builder" && git config --global user.email = "oe-builder@ettus.com"
-RUN repo init -u git://github.com/EttusResearch/oe-manifests.git -b rocko/n3xx
+RUN repo init -u git://github.com/EttusResearch/oe-manifests.git -b sumo
 RUN repo sync
 
 VOLUME /data /cache
