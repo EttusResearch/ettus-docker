@@ -3,7 +3,7 @@
 # please follow docker best practices
 # https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/
 
-FROM        fedora:25
+FROM        fedora:30
 MAINTAINER  Ettus Research
 
 # Last build date - this can be updated whenever there are security updates so
@@ -60,16 +60,13 @@ RUN dnf install -y \
     rsync \
     tar \
     xz \
+    rpcgen \
+    glibc-langpack-en \
     && \
     dnf clean all
 
 
 RUN useradd -u 2017 -ms /bin/bash oe-builder
-
-RUN echo "export LANG=en_US.utf-8" > /opt/export_LANG.sh
-ENV BASH_ENV=/opt/export_LANG.sh \
-    ENV=/opt/export_LANG.sh \
-    PROMPT_COMMAND="source /opt/export_LANG.sh"
 
 RUN curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > repo
 RUN chmod a+x repo
