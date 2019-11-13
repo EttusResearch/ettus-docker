@@ -71,13 +71,12 @@ ENV BASH_ENV=/opt/export_LANG.sh \
     ENV=/opt/export_LANG.sh \
     PROMPT_COMMAND="source /opt/export_LANG.sh"
 
+RUN git config --system user.name "Ettus OE Builder" && git config --system user.email "oe-builder@ettus.com"
 RUN curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > repo
 RUN chmod a+x repo
 RUN mv repo /usr/local/bin
 USER oe-builder
 WORKDIR /home/oe-builder
 USER oe-builder
-
-RUN git config --global user.name = "Ettus OE Builder" && git config --global user.email = "oe-builder@ettus.com"
 
 VOLUME /data /cache
