@@ -27,9 +27,9 @@ After running the previous command, you will be inside the container.
 The first time you run the Docker container, you need to setup the layers.
 There are various ways to do this, the easiest is to refer to a branch or tag
 on the oe-manifests repository, and have it instantiate the defaults. Here, we
-grab the defaults from the `sumo` branch:
+grab the defaults from the `thud` branch:
 
-    repo init -u git://github.com/EttusResearch/oe-manifests.git -b sumo
+    repo init -u git://github.com/EttusResearch/oe-manifests.git -b thud
     repo sync
 
 Note: You can also run the repo commands outside of the container, as long as
@@ -37,7 +37,7 @@ you stay in the oe-builder directory. This might help with missing ssh keys, if
 you're cloning the git repositories via ssh. To use ssh, adapt the `repo init`
 command as follows:
 
-    repo init -u ssh://git@github.com/EttusResearch/oe-manifests.git -b sumo
+    repo init -u ssh://git@github.com/EttusResearch/oe-manifests.git -b thud
 
 Recent versions of meta-ettus contain a script that will automate building a
 filesystem for you. For example, if you want to build an N310 filesystem, run
