@@ -59,6 +59,7 @@ RUN dnf install -y \
     rpm-devel \
     rsync \
     tar \
+    tmux \
     xz \
     && \
     dnf clean all
